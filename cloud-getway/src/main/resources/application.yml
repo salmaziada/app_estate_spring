@@ -1,0 +1,17 @@
+server:
+  port: 9191
+spring:
+  application:
+    name: API-GATWAT
+  cloud:
+    gateway:
+      routes:
+        - id: Flat-Service
+          uri: lb://flastservice
+          predicates:
+            - Path=/flat/**
+        - id: User-Service
+          uri: lb://userservice
+          predicates:
+            - Path=/users/**
+

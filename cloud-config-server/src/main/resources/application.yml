@@ -1,0 +1,11 @@
+server:
+  port: 9096
+spring:
+  application:
+    name: Config-service
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/salmaziada/config-server/
+          clone-on-start: true
